@@ -22,6 +22,7 @@ h1 {
   gap: 20px;
   padding-bottom: 10px;
   scroll-behavior: smooth;
+  transition: transform 0.3s ease; /* para zoom */
 }
 
 /* cada año como columna fija */
@@ -88,4 +89,62 @@ h1 {
   text-decoration: none;
   box-shadow: none;
   font-weight: 400;
+}
+
+/* Botones modo oscuro y zoom (esquina superior derecha) */
+.top-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.top-buttons button {
+  background-color: #D2C98A;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #725C3F;
+  box-shadow: 1px 1px 5px rgba(114, 92, 63, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.top-buttons button:hover {
+  background-color: #E5ADA8;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #2E2E2E;
+  color: #D2C98A;
+}
+
+body.dark-mode .anio {
+  border-color: #D2C98A;
+  background-color: #3C3C3C;
+}
+
+body.dark-mode .semestre {
+  background-color: #444;
+  border-color: #555;
+}
+
+body.dark-mode .ramo {
+  background-color: #725C3F;
+  color: #E5E0D8;
+  box-shadow: none;
+}
+
+body.dark-mode .ramo.aprobado {
+  background-color: #E5ADA8;
+  color: #2E2E2E;
+}
+
+body.dark-mode .ramo.bloqueado {
+  background-color: #555;
+  color: #999;
 }

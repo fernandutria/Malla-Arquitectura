@@ -1,30 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Curricular de Arquitectura</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Curricular Arquitectura</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+  <h1>Malla Curricular Arquitectura</h1>
+  <div class="malla-container">
+    <div class="malla">
 
-    <header>
-        <h1>Malla Interactiva de Arquitectura</h1>
-        <p>Haz clic en un ramo para marcarlo como aprobado. Los ramos se guardarán en tu navegador.</p>
-    </header>
+      <!-- Año 1 -->
+      <div class="anio">
+        <h2>Primer Año</h2>
 
-    <main id="malla-curricular" class="malla-container"></main>
+        <div class="semestre">
+          <h3>Semestre 1</h3>
+          <div class="ramo" data-id="taller1" data-requisitos="">
+            Taller de Proyecto I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion1" data-requisitos="">
+            Representación Arquitectónica I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="edificacion1" data-requisitos="">
+            Edificación I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="matematicas" data-requisitos="">
+            Matemáticas
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="historia1" data-requisitos="">
+            Historia de la Arquitectura I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="ingles1" data-requisitos="">
+            Inglés Comunicacional I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="formacionIntegral1" data-requisitos="">
+            Formación Integral
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
 
-    <footer>
-        <p>Creado con ❤️ para la planificación de tus estudios.</p>
-    </footer>
+        <div class="semestre">
+          <h3>Semestre 2</h3>
+          <div class="ramo" data-id="taller2" data-requisitos="taller1">
+            Taller de Proyecto II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion2" data-requisitos="representacion1">
+            Representación Arquitectónica II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="edificacion2" data-requisitos="edificacion1">
+            Edificación II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="estructuras1" data-requisitos="matematicas">
+            Estructuras I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="urbanismo1" data-requisitos="">
+            Urbanismo I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="fundamentos1" data-requisitos="">
+            Fundamentos de Arquitectura I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="ingles2" data-requisitos="ingles1">
+            Inglés Comunicacional II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Año 2 -->
+      <div class="anio">
+        <h2>Segundo Año</h2>
 
+        <div class="semestre">
+          <h3>Semestre 3</h3>
+          <div class="ramo" data-id="taller3" data-requisitos="taller2">
+            Taller de Proyecto III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion3" data-requisitos="representacion2">
+            Representación Arquitectónica III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="diseñoBioclimatico1" data-requisitos="">
+            Diseño Bioclimático I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="estructuras2" data-requisitos="estructuras1">
+            Estructuras II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="historia2" data-requisitos="historia1">
+            Historia de la Arquitectura II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="ingles3" data-requisitos="ingles2">
+            Inglés Comunicacional III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="semestre">
+          <h3>Semestre 4</h3>
+          <div class="ramo" data-id="taller4" data-requisitos="taller3">
+            Taller de Proyecto IV
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion4" data-requisitos="representacion3">
+            Representación Arquitectónica IV
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="edificacion3" data-requisitos="edificacion2">
+            Edificación III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="estructuras3" data-requisitos="estructuras2">
+            Estructuras III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="urbanismo2" data-requisitos="urbanismo1">
+            Urbanismo II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="fundamentos2" data-requisitos="fundamentos1">
+            Fundamentos de Arquitectura II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="ingles4" data-requisitos="ingles3">
+            Inglés Comunicacional IV
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Año 3 -->
+      <div class="anio">
+        <h2>Tercer Año</h2>
+
+        <div class="semestre">
+          <h3>Semestre 5</h3>
+          <div class="ramo" data-id="taller5" data-requisitos="taller4">
+            Taller de Proyecto V
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion5" data-requisitos="representacion4">
+            Representación Arquitectónica V
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="edificacion4" data-requisitos="edificacion3">
+            Edificación IV
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="disenoMadera" data-requisitos="estructuras3">
+            Diseño en Madera
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="semestre">
+          <h3>Semestre 6</h3>
+          <div class="ramo" data-id="taller6" data-requisitos="taller5">
+            Taller de Proyecto VI
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="representacion6" data-requisitos="representacion5">
+            Representación Arquitectónica VI
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="gestionProyectos" data-requisitos="">
+            Gestión de Proyectos
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="disenoBioambiental2" data-requisitos="disenoBioambiental1">
+            Diseño Bioambiental II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="urbanismo3" data-requisitos="urbanismo2">
+            Urbanismo III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="fundamentos3" data-requisitos="fundamentos2">
+            Fundamentos de Arquitectura III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="formacionIntegralExtra1" data-requisitos="">
+            Formación Integral extra programática I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Año 4 -->
+      <div class="anio">
+        <h2>Cuarto Año</h2>
+
+        <div class="semestre">
+          <h3>Semestre 7</h3>
+          <div class="ramo" data-id="taller7" data-requisitos="taller6">
+            Taller de Proyecto VII
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="electivoMedio1" data-requisitos="">
+            Electivo de Vinculación con el Medio I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="patrimonio" data-requisitos="historia3">
+            Patrimonio Arq y Urbano
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="electivoMedio2" data-requisitos="">
+            Electivo de Vinculación con el Medio II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="metodologia" data-requisitos="fundamentos3">
+            Metodología de la investigación
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="formacionIntegralExtra2" data-requisitos="formacionIntegralExtra1">
+            Formación Integral extra programática II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="semestre">
+          <h3>Semestre 8</h3>
+          <div class="ramo" data-id="taller8" data-requisitos="taller7">
+            Taller de Proyecto VIII
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="practica" data-requisitos="taller7">
+            Práctica Profesional
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="seminario" data-requisitos="metodologia">
+            Seminario
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="formacionIntegralExtra3" data-requisitos="formacionIntegralExtra2">
+            Formación integral extra programática III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Año 5 -->
+      <div class="anio">
+        <h2>Quinto Año</h2>
+
+        <div class="semestre">
+          <h3>Semestre 9</h3>
+          <div class="ramo" data-id="tallerFundamento" data-requisitos="taller8">
+            Taller de Fundamento
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="electivoEspecialidad1" data-requisitos="taller7">
+            Electivo de Especialidad I
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="electivoEspecialidad2" data-requisitos="taller7">
+            Electivo de Especialidad II
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="electivoEspecialidad3" data-requisitos="taller7">
+            Electivo de Especialidad III
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+          <div class="ramo" data-id="formacionIntegralExtra4" data-requisitos="formacionIntegralExtra3">
+            Formación integral extra programática IV
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="semestre">
+          <h3>Semestre 10</h3>
+          <div class="ramo" data-id="pfc" data-requisitos="tallerFundamento">
+            PFC (Proyecto Final de Carrera)
+            <input type="text" class="nota" placeholder="Nota" maxlength="4" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

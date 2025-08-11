@@ -21,20 +21,20 @@ h1 {
 .grid-malla {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   overflow-x: auto; /* Scroll solo horizontal */
-  overflow-y: hidden; /* Sin scroll vertical */
+  overflow-y: hidden;
   padding-bottom: 10px;
   scroll-behavior: smooth;
   max-width: 100vw;
-  height: 100vh; /* Ocupa toda la ventana */
+  height: 90vh; /* Limitar altura para que no haya scroll vertical */
   box-sizing: border-box;
   align-items: flex-start;
 }
 
 /* Ajuste del ancho de cada año para que todos quepan en pantalla */
 .anio {
-  flex: 0 0 10vw; /* Ancho ajustado para que entren 5 años cómodos */
+  flex: 0 0 18vw; /* Ancho fijo para que entren 5 años cómodos */
   border: 2px dashed #725C3F;
   padding: 10px;
   border-radius: 10px;
@@ -42,12 +42,12 @@ h1 {
   background: #fff;
   margin-bottom: 0;
   height: auto; /* Ajusta la altura automáticamente */
-  max-height: none;
+  max-height: 100%;
   overflow: visible; /* Sin scroll vertical */
 }
 
 .anio h1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -59,6 +59,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 6px;
   background: #fafafa;
+  overflow: visible;
 }
 
 .semestre h2 {

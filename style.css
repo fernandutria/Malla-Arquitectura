@@ -1,110 +1,102 @@
-/* Estilos Generales y Tipografía */
+/* Fuente Josefina Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 body {
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #fdf5e6; /* Fondo color crema */
-    color: #4a4a4a;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #fff8e7; /* Fondo crema */
+  color: #4C371C; /* Café oscuro */
+  margin: 0;
+  padding: 0;
 }
 
-header h1 {
-    color: #333;
-    font-size: 2.5em;
+h1 {
+  text-align: center;
+  margin: 15px 0;
 }
 
-/* Contenedor principal de la Malla */
 .malla-container {
-    display: flex; /* Usamos flexbox para alinear los años uno al lado del otro */
-    justify-content: center;
-    gap: 20px; /* Espacio entre los años */
-    overflow-x: auto; /* Permite scroll horizontal si no caben todos los años */
-    padding: 20px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 15px 10px;
 }
 
-/* Estilo para cada Año */
-.año {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    min-width: 320px; /* Ancho mínimo para cada columna de año */
+.malla {
+  display: flex;
+  gap: 25px;
+  min-width: 1300px; /* Ajusta según tu pantalla */
 }
 
-.año h2 {
-    font-size: 1.8em;
-    color: #d98695; /* Rosa pastel oscuro para el título del año */
-    border-bottom: 2px solid #f0e4d7;
-    padding-bottom: 10px;
-    margin-top: 0;
+.anio {
+  background-color: #f7eedc; /* tono vainilla */
+  border-radius: 10px;
+  padding: 10px 15px;
+  min-width: 260px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 }
 
-/* Contenedor de Semestres */
-.semestres-container {
-    display: flex;
-    flex-direction: column; /* Apila los semestres uno encima del otro */
-    gap: 20px;
+.anio h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-weight: 600;
 }
 
-/* Estilo para cada Semestre */
 .semestre {
-    background-color: #fdfaf7;
-    border: 1px dashed #f0e4d7;
-    border-radius: 10px;
-    padding: 15px;
+  border: 2px solid #f1e6c8; /* borde vainilla más oscuro */
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .semestre h3 {
-    font-size: 1.3em;
-    color: #555;
-    margin-top: 0;
-    margin-bottom: 15px;
+  margin: 0 0 10px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
 }
 
-/* Estilo Base para cada Ramo (Asignatura) */
 .ramo {
-    background-color: #f8c8dc; /* Rosa pastel para ramos disponibles */
-    color: #333;
-    padding: 12px;
-    margin: 5px 0;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: left;
-    border: 1px solid transparent;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreado suave */
-    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+  background-color: #B5A448; /* Verde disponible */
+  color: #4C371C;
+  border-radius: 6px;
+  padding: 7px 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.ramo:hover {
-    transform: translateY(-2px); /* Efecto de levantar al pasar el mouse */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-/* Estilo para Ramos Aprobados */
-.ramo.aprobado {
-    background-color: #a8d8c0; /* Verde melón para ramos aprobados */
-    color: #f8f8f8;
-    text-decoration: line-through; /* Texto tachado */
-    text-decoration-color: #5d8b77;
-    text-decoration-thickness: 2px;
-    opacity: 0.9;
-}
-
-/* Estilo para Ramos Bloqueados (Prerrequisitos no cumplidos) */
 .ramo.bloqueado {
-    background-color: #d8d8d8; /* Gris para ramos bloqueados */
-    color: #888;
-    cursor: not-allowed; /* Cambia el cursor para indicar que no es clickeable */
-    box-shadow: none;
-    opacity: 0.7;
+  background-color: #C4C2A1; /* Verde gris bloqueado */
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
-.ramo.bloqueado:hover {
-    transform: none; /* Sin efecto al pasar el mouse */
+.ramo.aprobado {
+  background-color: #ED9EA0; /* Rosa pastel aprobado */
+  text-decoration: line-through;
 }
 
-footer {
-    margin-top: 40px;
-    color: #999;
+.ramo .nota {
+  width: 45px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: rgba(255,255,255,0.9);
+  cursor: text;
 }
+
+.ramo .nota:focus {
+  outline: 2px solid #ED9EA0;
+}
+
+/* Scroll

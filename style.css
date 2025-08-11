@@ -34,7 +34,7 @@ h1 {
 
 /* Ajuste del ancho de cada año para que todos quepan en pantalla */
 .anio {
-  flex: 0 0 8vw; /* Ancho ajustado para que entren 5 años cómodos */
+  flex: 0 0 10vw; /* Ancho ajustado para que entren 5 años cómodos */
   border: 2px dashed #725C3F;
   padding: 10px;
   border-radius: 10px;

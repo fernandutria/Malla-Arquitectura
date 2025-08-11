@@ -3,134 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla Arquitectura</title>
+  <title> Arquitectura </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Malla Curricular - Arquitectura</h1>
-      <!-- Año 1 -->
-      <div class="anio">
-        <h2>Año 1</h2>
-        <div class="semestre" id="sem1">
-          <h3>Semestre 1</h3>
-          <div class="ramo" data-id="a1s1r1">Taller de Proyecto I</div>
-          <div class="ramo" data-id="a1s1r2">Representación Arquitectónica I</div>
-          <div class="ramo" data-id="a1s1r3">Edificación I</div>
-          <div class="ramo" data-id="a1s1r4">Matemáticas</div>
-          <div class="ramo" data-id="a1s1r5">Historia de la Arquitectura I</div>
-          <div class="ramo" data-id="a1s1r6">Inglés Comunicacional I</div>
-          <div class="ramo" data-id="a1s1r7">Formación Integral</div>
-        </div>
-        <div class="semestre" id="sem2">
-          <h3>Semestre 2</h3>
-          <div class="ramo" data-id="a1s2r1" data-prereq="a1s1r1">Taller de Proyecto II</div>
-          <div class="ramo" data-id="a1s2r2" data-prereq="a1s1r2">Representación Arquitectónica II</div>
-          <div class="ramo" data-id="a1s2r3" data-prereq="a1s1r3">Edificación II</div>
-          <div class="ramo" data-id="a1s2r4" data-prereq="a1s1r4">Estructuras I</div>
-          <div class="ramo" data-id="a1s2r5">Urbanismo I</div>
-          <div class="ramo" data-id="a1s2r6">Fundamentos de Arquitectura I</div>
-          <div class="ramo" data-id="a1s2r7" data-prereq="a1s1r6">Inglés Comunicacional II</div>
-        </div>
+  <div class="grid-malla contenedor-malla">
+  
+    <!-- Año 1 -->
+    <div class="anio">
+      <h1>Año 1</h1>
+      <div class="semestre" id="sem1">
+        <h2>Semestre 1</h2>
+        <div class="ramo" data-id="a1s1r1">Taller de Proyecto I</div>
+        <div class="ramo" data-id="a1s1r2">Representación Arquitectónica I</div>
+        <div class="ramo" data-id="a1s1r3">Edificación I</div>
+        <div class="ramo" data-id="a1s1r4">Matemáticas</div>
+        <div class="ramo" data-id="a1s1r5">Historia de la Arquitectura I</div>
+        <div class="ramo" data-id="a1s1r6">Inglés Comunicacional I</div>
+        <div class="ramo" data-id="a1s1r7">Formación Integral</div>
       </div>
+      <div class="semestre" id="sem2">
+        <h2>Semestre 2</h2>
+        <div class="ramo" data-id="a1s2r1" data-prereq="a1s1r1">Taller de Proyecto II</div>
+        <div class="ramo" data-id="a1s2r2" data-prereq="a1s1r2">Representación Arquitectónica II</div>
+        <div class="ramo" data-id="a1s2r3" data-prereq="a1s1r3">Edificación II</div>
+        <div class="ramo" data-id="a1s2r4" data-prereq="a1s1r4">Estructuras I</div>
+        <div class="ramo" data-id="a1s2r5">Urbanismo I</div>
+        <div class="ramo" data-id="a1s2r6">Fundamentos de Arquitectura I</div>
+        <div class="ramo" data-id="a1s2r7" data-prereq="a1s1r6">Inglés Comunicacional II</div>
+      </div>
+    </div>
 
-      <!-- Año 2 -->
-      <div class="anio">
-        <h2>Año 2</h2>
-        <div class="semestre" id="sem3">
-          <h3>Semestre 3</h3>
-          <div class="ramo" data-id="a2s3r1" data-prereq="a1s2r1">Taller de Proyecto III</div>
-          <div class="ramo" data-id="a2s3r2" data-prereq="a1s2r2">Representación Arquitectónica III</div>
-          <div class="ramo" data-id="a2s3r3">Diseño Bioclimático I</div>
-          <div class="ramo" data-id="a2s3r4" data-prereq="a1s2r4">Estructuras II</div>
-          <div class="ramo" data-id="a2s3r5" data-prereq="a1s1r5">Historia de la Arquitectura II</div>
-          <div class="ramo" data-id="a2s3r6" data-prereq="a1s2r7">Inglés Comunicacional III</div>
-        </div>
-        <div class="semestre" id="sem4">
-          <h3>Semestre 4</h3>
-          <div class="ramo" data-id="a2s4r1" data-prereq="a2s3r1">Taller de Proyecto IV</div>
-          <div class="ramo" data-id="a2s4r2" data-prereq="a2s3r2">Representación Arquitectónica IV</div>
-          <div class="ramo" data-id="a2s4r3" data-prereq="a1s2r3">Edificación III</div>
-          <div class="ramo" data-id="a2s4r4" data-prereq="a2s3r4">Estructuras III</div>
-          <div class="ramo" data-id="a2s4r5" data-prereq="a1s2r5">Urbanismo II</div>
-          <div class="ramo" data-id="a2s4r6" data-prereq="a1s2r6">Fundamentos de Arquitectura II</div>
-          <div class="ramo" data-id="a2s4r7" data-prereq="a2s3r6">Inglés Comunicacional IV</div>
-        </div>
+    <!-- Año 2 -->
+    <div class="anio">
+      <h1>Año 2</h1>
+      <div class="semestre" id="sem3">
+        <h2>Semestre 3</h2>
+        <div class="ramo" data-id="a2s3r1" data-prereq="a1s2r1">Taller de Proyecto III</div>
+        <div class="ramo" data-id="a2s3r2" data-prereq="a1s2r2">Representación Arquitectónica III</div>
+        <div class="ramo" data-id="a2s3r3">Diseño Bioclimático I</div>
+        <div class="ramo" data-id="a2s3r4" data-prereq="a1s2r4">Estructuras II</div>
+        <div class="ramo" data-id="a2s3r5" data-prereq="a1s1r5">Historia de la Arquitectura II</div>
+        <div class="ramo" data-id="a2s3r6" data-prereq="a1s2r7">Inglés Comunicacional III</div>
       </div>
+      <div class="semestre" id="sem4">
+        <h2>Semestre 4</h2>
+        <div class="ramo" data-id="a2s4r1" data-prereq="a2s3r1">Taller de Proyecto IV</div>
+        <div class="ramo" data-id="a2s4r2" data-prereq="a2s3r2">Representación Arquitectónica IV</div>
+        <div class="ramo" data-id="a2s4r3" data-prereq="a1s2r3">Edificación III</div>
+        <div class="ramo" data-id="a2s4r4" data-prereq="a2s3r4">Estructuras III</div>
+        <div class="ramo" data-id="a2s4r5" data-prereq="a1s2r5">Urbanismo II</div>
+        <div class="ramo" data-id="a2s4r6" data-prereq="a1s2r6">Fundamentos de Arquitectura II</div>
+        <div class="ramo" data-id="a2s4r7" data-prereq="a2s3r6">Inglés Comunicacional IV</div>
+      </div>
+    </div>
 
-      <!-- Año 3 -->
-      <div class="anio">
-        <h2>Año 3</h2>
-        <div class="semestre" id="sem5">
-          <h3>Semestre 5</h3>
-          <div class="ramo" data-id="a3s5r1" data-prereq="a2s4r1">Taller de Proyecto V</div>
-          <div class="ramo" data-id="a3s5r2" data-prereq="a2s4r2">Representación Arquitectónica V</div>
-          <div class="ramo" data-id="a3s5r3" data-prereq="a2s4r3">Edificación IV</div>
-          <div class="ramo" data-id="a3s5r4" data-prereq="a2s4r4">Diseño en Madera</div>
-        </div>
-        <div class="semestre" id="sem6">
-          <h3>Semestre 6</h3>
-          <div class="ramo" data-id="a3s6r1" data-prereq="a3s5r1">Taller de Proyecto VI</div>
-          <div class="ramo" data-id="a3s6r2" data-prereq="a3s5r2">Representación Arquitectónica VI</div>
-          <div class="ramo" data-id="a3s6r3">Gestión de Proyectos</div>
-          <div class="ramo" data-id="a3s6r4" data-prereq="a2s3r3">Diseño Bioambiental II</div>
-          <div class="ramo" data-id="a3s6r5" data-prereq="a2s4r5">Urbanismo III</div>
-          <div class="ramo" data-id="a3s6r6" data-prereq="a2s4r6">Fundamentos de Arquitectura III</div>
-          <div class="ramo" data-id="a3s6r7">Formación Integral Extra Programática I</div>
-        </div>
+    <!-- Año 3 -->
+    <div class="anio">
+      <h1>Año 3</h1>
+      <div class="semestre" id="sem5">
+        <h2>Semestre 5</h2>
+        <div class="ramo" data-id="a3s5r1" data-prereq="a2s4r1">Taller de Proyecto V</div>
+        <div class="ramo" data-id="a3s5r2" data-prereq="a2s4r2">Representación Arquitectónica V</div>
+        <div class="ramo" data-id="a3s5r3" data-prereq="a2s4r3">Edificación IV</div>
+        <div class="ramo" data-id="a3s5r4" data-prereq="a2s4r4">Diseño en Madera</div>
       </div>
-
-      <!-- Año 4 -->
-      <div class="anio">
-        <h2>Año 4</h2>
-        <div class="semestre" id="sem7">
-          <h3>Semestre 7</h3>
-          <div class="ramo" data-id="a4s7r1" data-prereq="a3s6r1">Taller de Proyecto VII</div>
-          <div class="ramo" data-id="a4s7r5">Electivo de Vinculación con el Medio I</div>
-          <div class="ramo" data-id="a4s7r2" data-prereq="a2s3r5">Patrimonio Arq y Urbano</div>
-          <div class="ramo" data-id="a4s7r6">Electivo de Vinculación con el Medio II</div>
-          <div class="ramo" data-id="a4s7r3" data-prereq="a3s6r6">Metodología de la investigación</div>
-          <div class="ramo" data-id="a4s7r4" data-prereq="a3s6r7">Formación Integral extra programática II</div>
-        </div>
-        <div class="semestre" id="sem8">
-          <h3>Semestre 8</h3>
-          <div class="ramo" data-id="a4s8r1" data-prereq="a4s7r1">Taller de Proyecto VIII</div>
-          <div class="ramo" data-id="a4s8r2" data-prereq="a4s7r1">Práctica Profesional</div>
-          <div class="ramo" data-id="a4s8r3" data-prereq="a4s7r3">Seminario</div>
-          <div class="ramo" data-id="a4s8r4" data-prereq="a4s7r4">Formación integral extra programática III</div>
-        </div>
+      <div class="semestre" id="sem6">
+        <h2>Semestre 6</h2>
+        <div class="ramo" data-id="a3s6r1" data-prereq="a3s5r1">Taller de Proyecto VI</div>
+        <div class="ramo" data-id="a3s6r2" data-prereq="a3s5r2">Representación Arquitectónica VI</div>
+        <div class="ramo" data-id="a3s6r3">Gestión de Proyectos</div>
+        <div class="ramo" data-id="a3s6r4" data-prereq="a2s3r3">Diseño Bioambiental II</div>
+        <div class="ramo" data-id="a3s6r5" data-prereq="a2s4r5">Urbanismo III</div>
+        <div class="ramo" data-id="a3s6r6" data-prereq="a2s4r6">Fundamentos de Arquitectura III</div>
+        <div class="ramo" data-id="a3s6r7">Formación Integral Extra Programática I</div>
       </div>
-
-      <!-- Año 5 -->
-      <div class="anio">
-        <h2>Año 5</h2>
-        <div class="semestre" id="sem9">
-          <h3>Semestre 9</h3>
-          <div class="ramo" data-id="a5s9r1" data-prereq="a4s8r1">Taller de Fundamento</div>
-          <div class="ramo" data-id="a5s9r3" data-prereq="a4s8r1">Electivo de Especialidad I</div>
-          <div class="ramo" data-id="a5s9r4" data-prereq="a4s8r1">Electivo de Especialidad II</div>
-          <div class="ramo" data-id="a5s9r5" data-prereq="a4s8r1">Electivo de Especialidad III</div>
-          <div class="ramo" data-id="a5s9r2" data-prereq="a4s8r4">Formación integral extra programática IV</div>
-        </div>
-        <div class="semestre" id="sem10">
-          <h3>Semestre 10</h3>
-          <div class="ramo" data-id="a5s10r1" data-prereq="a5s9r1">PFC (Proyecto Final de Carrera)</div>
-        </div>
-      </div>
-    
     </div>
   </div>
-  
-<!-- Botones arriba derecha -->
-  <div class="top-buttons">
-    <button id="modoOscuroBtn" title="Modo Oscuro">🌓</button>
-    <button id="zoomMas" title="Zoom +">＋</button>
-    <button id="zoomMenos" title="Zoom -">－</button>
-  </div>
 
-  <!-- Contenedor principal para zoom -->
-  <div class="contenedor-malla">
-    <div class="grid-malla">
-      
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

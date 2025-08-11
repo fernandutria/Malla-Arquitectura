@@ -1,0 +1,36 @@
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const ramos = document.querySelectorAll(".ramo");
+  let aprobados = JSON.parse(localStorage.getItem("aprobados")) || [];
+
+  function actualizarEstado() {
+    ramos.forEach(ramo => {
+      const id = ramo.dataset.id;
+      const prereq = ramo.dataset.prereq;
+      ramo.classList.remove("aprobado", "bloqueado");
+
+      if (prereq && !aprobados.includes(prereq)) {
+        ramo.classList.add("bloqueado");
+      } else if (aprobados.includes(id)) {
+        ramo.classList.add("aprobado");
+      }
+    });
+  }
+
+  ramos.forEach(ramo => {
+    ramo.addEventListener("click", () => {
+      if (ramo.classList.contains("bloqueado")) return;
+
+      const id = ramo.dataset.id;
+      if (aprobados.includes(id)) {
+        aprobados = aprobados.filter(x => x !== id);
+      } else {
+        aprobados.push(id);
+      }
+      localStorage.setItem("aprobados", JSON.stringify(aprobados));
+      actualizarEstado();
+    });
+  });
+
+  actualizarEstado();
+});

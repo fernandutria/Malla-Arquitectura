@@ -1,107 +1,110 @@
-/* Importar Josefin Sans desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
-
+/* Estilos Generales y Tipografía */
 body {
-  margin: 0;
-  padding: 20px;
-  overflow-x: hidden; /* Evita scroll horizontal extra */
-  overflow-y: hidden; /* Evita scroll vertical */
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #E5E0D8;
-  color: #725C3F;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fdf5e6; /* Fondo color crema */
+    color: #4a4a4a;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: #725C3F;
+header h1 {
+    color: #333;
+    font-size: 2.5em;
 }
 
-.grid-malla {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  overflow-x: auto; /* Scroll solo horizontal */
-  overflow-y: hidden;
-  padding-bottom: 10px;
-  scroll-behavior: smooth;
-  max-width: 100vw;
-  height: 90vh; /* Limitar altura para que no haya scroll vertical */
-  box-sizing: border-box;
-  align-items: flex-start;
+/* Contenedor principal de la Malla */
+.malla-container {
+    display: flex; /* Usamos flexbox para alinear los años uno al lado del otro */
+    justify-content: center;
+    gap: 20px; /* Espacio entre los años */
+    overflow-x: auto; /* Permite scroll horizontal si no caben todos los años */
+    padding: 20px 0;
 }
 
-/* Ajuste del ancho de cada año para que todos quepan en pantalla */
-.anio {
-  flex: 0 0 18vw; /* Ancho fijo para que entren 5 años cómodos */
-  border: 2px dashed #725C3F;
-  padding: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  background: #fff;
-  margin-bottom: 0;
-  height: auto; /* Ajusta la altura automáticamente */
-  max-height: 100%;
-  overflow: visible; /* Sin scroll vertical */
+/* Estilo para cada Año */
+.año {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    min-width: 320px; /* Ancho mínimo para cada columna de año */
 }
 
-.anio h1 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  text-align: center;
+.año h2 {
+    font-size: 1.8em;
+    color: #d98695; /* Rosa pastel oscuro para el título del año */
+    border-bottom: 2px solid #f0e4d7;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-/* Semestres dentro del año */
+/* Contenedor de Semestres */
+.semestres-container {
+    display: flex;
+    flex-direction: column; /* Apila los semestres uno encima del otro */
+    gap: 20px;
+}
+
+/* Estilo para cada Semestre */
 .semestre {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fafafa;
-  overflow: visible;
+    background-color: #fdfaf7;
+    border: 1px dashed #f0e4d7;
+    border-radius: 10px;
+    padding: 15px;
 }
 
-.semestre h2 {
-  font-size: 0.85rem;
-  margin-bottom: 6px;
-  text-align: center;
-  color: #725C3F;
-  font-weight: 700;
+.semestre h3 {
+    font-size: 1.3em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-/* Botones de ramos */
+/* Estilo Base para cada Ramo (Asignatura) */
 .ramo {
-  font-size: 0.75rem;
-  padding: 5px 6px;
-  margin: 3px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 1px 1px 5px rgba(114, 92, 63, 0.3); /* sombra tenue */
-  background-color: #D2C98A; /* disponible */
-  color: #725C3F;
-  text-align: center;
-  user-select: none;
-  transition: all 0.2s ease;
-  font-weight: 400;
+    background-color: #f8c8dc; /* Rosa pastel para ramos disponibles */
+    color: #333;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
 }
 
-.ramo:hover:not(.bloqueado) {
-  transform: scale(1.05);
+.ramo:hover {
+    transform: translateY(-2px); /* Efecto de levantar al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* Estado aprobado */
+/* Estilo para Ramos Aprobados */
 .ramo.aprobado {
-  background-color: #E5ADA8; /* aprobado */
-  text-decoration: line-through;
-  font-weight: 700;
+    background-color: #a8d8c0; /* Verde melón para ramos aprobados */
+    color: #f8f8f8;
+    text-decoration: line-through; /* Texto tachado */
+    text-decoration-color: #5d8b77;
+    text-decoration-thickness: 2px;
+    opacity: 0.9;
 }
 
-/* Estado bloqueado */
+/* Estilo para Ramos Bloqueados (Prerrequisitos no cumplidos) */
 .ramo.bloqueado {
-  background-color: #C7B79B; /* bloqueado */
-  cursor: not-allowed;
-  box-shadow: none;
-  text-decoration: none;
-  font-weight: 400;
+    background-color: #d8d8d8; /* Gris para ramos bloqueados */
+    color: #888;
+    cursor: not-allowed; /* Cambia el cursor para indicar que no es clickeable */
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.ramo.bloqueado:hover {
+    transform: none; /* Sin efecto al pasar el mouse */
+}
+
+footer {
+    margin-top: 40px;
+    color: #999;
 }

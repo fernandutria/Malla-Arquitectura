@@ -90,11 +90,5 @@ document.addEventListener("DOMContentLoaded", () => {
       zoomLevel -= 0.1;
       grid.style.transform = `scale(${zoomLevel})`;
     }
-  });
-});
-      actualizarEstado();
-    });
-  });
-
   actualizarEstado();
 });

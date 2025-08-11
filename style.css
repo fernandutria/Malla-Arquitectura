@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'Chinacat';
+  src: url('fonts/Chinacat.woff2') format('woff2'),
+       url('fonts/Chinacat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Arial', sans-serif; /* Fallback */
+  background-color: #E5E0D8;
   padding: 20px;
   margin: 0;
 }
@@ -8,6 +16,8 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  font-family: 'Chinacat', serif;
+  color: #725C3F;
 }
 
 .grid-malla {
@@ -16,11 +26,21 @@ h1 {
   gap: 15px;
 }
 
+/* Contenedor año: agrupa dos semestres */
+.anio {
+  border: 2px dashed #725C3F;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+/* Mantener la estructura semestre dentro del año */
 .semestre {
   background: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 .semestre h2 {
@@ -29,30 +49,40 @@ h1 {
   padding: 5px;
   border-radius: 8px;
   margin-bottom: 10px;
+  font-family: 'Chinacat', serif;
+  color: #725C3F;
 }
 
+/* Botones (ramos) */
 .ramo {
-  background: #c9a0dc; /* Lila por defecto */
+  font-family: 'Chinacat', serif;
+  background-color: #D2C98A; /* disponible */
+  color: #725C3F;
   padding: 8px;
   margin: 5px 0;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
   transition: all 0.2s ease;
+  box-shadow: 1px 1px 5px rgba(114, 92, 63, 0.3); /* sombra tenue */
 }
 
 .ramo:hover {
   transform: scale(1.03);
 }
 
+/* Aprobado */
 .ramo.aprobado {
-  background: #f7a8b8; /* Rosado */
+  background-color: #E5ADA8; /* aprobado */
   text-decoration: line-through;
+  color: #725C3F;
 }
 
+/* Bloqueado */
 .ramo.bloqueado {
-  background: #ccc; /* Gris */
+  background-color: #C7B79B; /* bloqueado */
   cursor: not-allowed;
-  color: #666;
+  color: #725C3F;
   text-decoration: none;
+  box-shadow: none;
 }

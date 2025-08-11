@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Curricular Arquitectura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular - Arquitectura</h1>
+
+  <div class="semestre">
+    <h2>Semestre 1</h2>
+    <div class="ramo" data-id="taller1">Taller de Proyecto I</div>
+    <div class="ramo" data-id="rep1">Representación Arquitectónica I</div>
+    <div class="ramo" data-id="edif1">Edificación I</div>
+    <div class="ramo" data-id="mate">Matemáticas</div>
+    <div class="ramo" data-id="hist1">Historia de la Arquitectura I</div>
+    <div class="ramo" data-id="ing1">Inglés Comunicacional I</div>
+    <div class="ramo" data-id="form1">Formación Integral</div>
+  </div>
+
+  <div class="semestre">
+    <h2>Semestre 2</h2>
+    <div class="ramo" data-id="taller2" data-prereq="taller1">Taller de Proyecto II</div>
+    <div class="ramo" data-id="rep2" data-prereq="rep1">Representación Arquitectónica II</div>
+    <div class="ramo" data-id="edif2" data-prereq="edif1">Edificación II</div>
+    <div class="ramo" data-id="estruc1" data-prereq="mate">Estructuras I</div>
+    <div class="ramo" data-id="urb1">Urbanismo I</div>
+    <div class="ramo" data-id="fund1">Fundamentos de Arquitectura I</div>
+    <div class="ramo" data-id="ing2" data-prereq="ing1">Inglés Comunicacional II</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ramos = document.querySelectorAll(".ramo");
   let aprobados = JSON.parse(localStorage.getItem("aprobados")) || [];
+
   function actualizarEstado() {
     ramos.forEach(ramo => {
       const id = ramo.dataset.id;
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Quitar estilos previos
       ramo.classList.remove("aprobado", "bloqueado");
 
-      // Ignorar ramos sin id o con clase no-check (no interactivos)
+      // Ignorar ramos sin id o con clase no-check
       if (!id || ramo.classList.contains("no-check")) {
         return;
       }
@@ -43,11 +44,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       localStorage.setItem("aprobados", JSON.stringify(aprobados));
-      
-      document.addEventListener("DOMContentLoaded", () => {
-    }
+      actualizarEstado();
+    });
+  });
+
   actualizarEstado();
-});
-        
-actualizarEstado();
+
+  // ----- MODO OSCURO -----
+  const btnModoOscuro = document.getElementById("modoOscuroBtn");
+  if (btnModoOscuro) {
+    btnModoOscuro.addEventListener("click", () => {
+      document.body.classList.toggle("modo-oscuro");
+    });
+  }
+
+  // ----- ZOOM -----
+  const btnZoomMas = document.getElementById("zoomMas");
+  const btnZoomMenos = document.getElementById("zoomMenos");
+  let escala = 1;
+
+  function aplicarZoom() {
+    document.querySelector(".contenedor-malla").style.transform = `scale(${escala})`;
+    document.querySelector(".contenedor-malla").style.transformOrigin = "0 0";
+  }
+
+  if (btnZoomMas) {
+    btnZoomMas.addEventListener("click", () => {
+      escala += 0.1;
+      aplicarZoom();
+    });
+  }
+
+  if (btnZoomMenos) {
+    btnZoomMenos.addEventListener("click", () => {
+      escala = Math.max(0.5, escala - 0.1);
+      aplicarZoom();
+    });
+  }
 });

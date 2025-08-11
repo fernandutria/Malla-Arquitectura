@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Botones de control -->
+  <div class="top-buttons">
+    <button id="darkModeToggle">🌙</button>
+    <button id="zoomToggle">🔍</button>
+  </div>
+
+  <!-- Contenedor de malla -->
+  <div class="malla">
+    <!-- Ejemplo de ramos -->
+    <div class="ramo" data-id="a1s1r1">Ramo 1</div>
+    <div class="ramo" data-id="a1s1r2" data-prereq="a1s1r1">Ramo 2</div>
+    <div class="ramo electivo" data-id="a1s1r3">Electivo</div>
+    <div class="ramo no-check">Texto informativo</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
   <h1>Malla Curricular - Arquitectura</h1>
   <div class="grid-malla">
   

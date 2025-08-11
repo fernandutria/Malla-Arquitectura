@@ -69,16 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (btnZoomMas) {
-    btnZoomMas.addEventListener("click", () => {
+  btnZoomMas.addEventListener("click", () => {
+    if (escala < 2) {    // límite máximo
       escala += 0.1;
       aplicarZoom();
-    });
-  }
+    }
+  });
+}
 
-  if (btnZoomMenos) {
-    btnZoomMenos.addEventListener("click", () => {
-      escala = Math.max(0.5, escala - 0.1);
+if (btnZoomMenos) {
+  btnZoomMenos.addEventListener("click", () => {
+    if (escala > 0.5) {  // límite mínimo
+      escala -= 0.1;
       aplicarZoom();
-    });
-  }
-});
+    }
+  });
+}

@@ -17,20 +17,41 @@ h1 {
 
 .grid-malla {
   display: flex;
-  overflow-x: auto;
+  flex-direction: row; /* fila horizontal */
   gap: 20px;
+  overflow-x: auto;  /* scroll horizontal */
   padding-bottom: 10px;
   scroll-behavior: smooth;
+  max-width: 100vw;  /* que no se salga de la pantalla */
+  height: 100vh; /* para que use toda la altura visible */
+  align-items: flex-start; /* alineación arriba */
+  box-sizing: border-box;
 }
 
-/* cada año como columna fija */
+/* cada año como columna */
 .anio {
-  flex: 0 0 auto;
-  width: 350px;
+  flex: 0 0 auto;  /* que no se reduzca ni expanda */
+  width: 300px; /* ancho fijo, puedes ajustar */
   border: 2px dashed #725C3F;
   padding: 15px;
-  margin-bottom: 25px;
   border-radius: 10px;
+  margin-bottom: 0; /* ya no queremos margen abajo, porque están en fila */
+  box-sizing: border-box;
+  background: #fff;
+  max-height: 90vh; /* que no sobrepase la pantalla vertical */
+  overflow-y: auto; /* para que se pueda scrollear vertical si el contenido es largo */
+}
+
+/* Ajusta la altura para que semestres y ramos se ajusten */
+.semestre {
+  margin-bottom: 20px;
+}
+
+/* Para que el body no tenga padding que afecte el ancho */
+body {
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden; /* prevenir doble scroll */
 }
 
 /* semestres dentro de año */

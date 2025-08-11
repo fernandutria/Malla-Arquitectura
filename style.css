@@ -3,19 +3,11 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #E5E0D8; /* claro */
+  background-color: #E5E0D8;
   padding: 20px;
   margin: 0;
   color: #725C3F;
-  transition: background-color 0.3s, color 0.3s;
 }
-
-body.dark {
-  background-color: #725C3F;
-  color: #E5E0D8;
-}
-
-/* Y adapta los colores de los ramos y botones usando variables CSS o con selectores */
 
 h1 {
   text-align: center;

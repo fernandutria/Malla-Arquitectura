@@ -8,13 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const prereq = ramo.dataset.prereq;
       const esElectivo = ramo.classList.contains("electivo");
 
-      // Quitar estilos previos
       ramo.classList.remove("aprobado", "bloqueado");
 
-      // Ignorar ramos sin id o con clase no-check
-      if (!id || ramo.classList.contains("no-check")) {
-        return;
-      }
+      if (!id || ramo.classList.contains("no-check")) return;
 
       if (esElectivo) {
         if (aprobados.includes(id)) {
@@ -49,39 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   actualizarEstado();
-
-  // ----- MODO OSCURO -----
-  const btnModoOscuro = document.getElementById("modoOscuroBtn");
-  if (btnModoOscuro) {
-    btnModoOscuro.addEventListener("click", () => {
-      document.body.classList.toggle("modo-oscuro");
-    });
-  }
-
-  // ----- ZOOM -----
-  const btnZoomMas = document.getElementById("zoomMas");
-  const btnZoomMenos = document.getElementById("zoomMenos");
-  let escala = 1;
-
-  function aplicarZoom() {
-    document.querySelector(".contenedor-malla").style.transform = `scale(${escala})`;
-    document.querySelector(".contenedor-malla").style.transformOrigin = "0 0";
-  }
-
-  if (btnZoomMas) {
-  btnZoomMas.addEventListener("click", () => {
-    if (escala < 2) {    // límite máximo
-      escala += 0.1;
-      aplicarZoom();
-    }
-  });
-}
-
-if (btnZoomMenos) {
-  btnZoomMenos.addEventListener("click", () => {
-    if (escala > 0.5) {  // límite mínimo
-      escala -= 0.1;
-      aplicarZoom();
-    }
-  });
-}
+});

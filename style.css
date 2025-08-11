@@ -1,22 +1,18 @@
-@font-face {
-  font-family: 'Chinacat';
-  src: url('fonts/Chinacat.woff2') format('woff2'),
-       url('fonts/Chinacat.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+/* Importar Josefin Sans desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 body {
-  font-family: 'Arial', sans-serif; /* Fallback */
+  font-family: 'Josefin Sans', sans-serif;
   background-color: #E5E0D8;
   padding: 20px;
   margin: 0;
+  color: #725C3F;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-family: 'Chinacat', serif;
+  font-weight: 700;
   color: #725C3F;
 }
 
@@ -34,7 +30,7 @@ h1 {
   border-radius: 10px;
 }
 
-/* Mantener la estructura semestre dentro del año */
+/* Semestres dentro del año */
 .semestre {
   background: #fff;
   border: 2px solid #ccc;
@@ -49,13 +45,12 @@ h1 {
   padding: 5px;
   border-radius: 8px;
   margin-bottom: 10px;
-  font-family: 'Chinacat', serif;
+  font-weight: 700;
   color: #725C3F;
 }
 
 /* Botones (ramos) */
 .ramo {
-  font-family: 'Chinacat', serif;
   background-color: #D2C98A; /* disponible */
   color: #725C3F;
   padding: 8px;
@@ -65,6 +60,8 @@ h1 {
   text-align: center;
   transition: all 0.2s ease;
   box-shadow: 1px 1px 5px rgba(114, 92, 63, 0.3); /* sombra tenue */
+  font-weight: 400;
+  user-select: none;
 }
 
 .ramo:hover {
@@ -76,6 +73,7 @@ h1 {
   background-color: #E5ADA8; /* aprobado */
   text-decoration: line-through;
   color: #725C3F;
+  font-weight: 700;
 }
 
 /* Bloqueado */
@@ -85,4 +83,5 @@ h1 {
   color: #725C3F;
   text-decoration: none;
   box-shadow: none;
+  font-weight: 400;
 }

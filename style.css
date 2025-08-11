@@ -4,8 +4,8 @@
 body {
   margin: 0;
   padding: 20px;
-  overflow-x: hidden; /* Evitar scroll horizontal extra */
-  overflow-y: hidden; /* Evitar scroll vertical */
+  overflow-x: hidden; /* Evita scroll horizontal extra */
+  overflow-y: hidden; /* Evita scroll vertical */
   font-family: 'Josefin Sans', sans-serif;
   background-color: #E5E0D8;
   color: #725C3F;
@@ -32,9 +32,9 @@ h1 {
   align-items: flex-start;
 }
 
-/* Cada año como columna fija para 5 años en pantalla */
+/* Ajuste del ancho de cada año para que todos quepan en pantalla */
 .anio {
-  flex: 0 0 19vw; /* Ancho fijo para que entren 5 años cómodos */
+  flex: 0 0 18vw; /* Ancho ajustado para que entren 5 años cómodos */
   border: 2px dashed #725C3F;
   padding: 10px;
   border-radius: 10px;

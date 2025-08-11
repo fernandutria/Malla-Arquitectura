@@ -6,17 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ramos.forEach(ramo => {
       const id = ramo.dataset.id;
       const prereq = ramo.dataset.prereq;
+      const esElectivo = ramo.classList.contains("electivo");
 
       // Quitar estilos previos
       ramo.classList.remove("aprobado", "bloqueado");
 
-      // Si tiene prerrequisito y no está aprobado → bloqueado
-      if (prereq && !aprobados.includes(prereq)) {
-        ramo.classList.add("bloqueado");
-      } 
-      // Si está aprobado → marcar como aprobado
-      else if (aprobados.includes(id)) {
-        ramo.classList.add("aprobado");
+      // Si es electivo, no bloquearlo
+      if (esElectivo) {
+        if (aprobados.includes(id)) {
+          ramo.classList.add("aprobado");
+        }
+      } else {
+        // Si tiene prerequisito y no está aprobado → bloqueado
+        if (prereq && !aprobados.includes(prereq)) {
+          ramo.classList.add("bloqueado");
+        } else if (aprobados.includes(id)) {
+          ramo.classList.add("aprobado");
+        }
       }
     });
   }

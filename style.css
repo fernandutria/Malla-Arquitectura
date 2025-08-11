@@ -17,20 +17,24 @@ h1 {
 }
 
 .grid-malla {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
 }
 
-/* Contenedor año: agrupa dos semestres */
+/* cada año como columna fija */
 .anio {
+  flex: 0 0 auto;
+  width: 350px;
   border: 2px dashed #725C3F;
   padding: 15px;
   margin-bottom: 25px;
   border-radius: 10px;
 }
 
-/* Semestres dentro del año */
+/* semestres dentro de año */
 .semestre {
   background: #fff;
   border: 2px solid #ccc;
